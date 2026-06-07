@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile | HARA CAT STUDIO</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Outfit', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="font-sans bg-white min-h-screen bg-[url('images/hero.png')] bg-no-repeat bg-right-bottom bg-contain">
+
+  <header class="p-6 lg:px-8">
+    <a href="index.html"
+       class="text-sm font-bold text-gray-500 hover:text-gray-900 uppercase tracking-widest transition">
+      ← Back to Home
+    </a>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-6 min-h-[calc(100vh-80px)] flex items-center">
+
+    <div class="w-full max-w-lg bg-white/85 backdrop-blur-md rounded-[2rem] border border-gray-100 shadow-2xl shadow-gray-900/10 p-10">
+
+      <!-- Top -->
+      <div class="flex items-center gap-5">
+        <div class="w-16 h-16 rounded-full bg-gray-900 flex items-center justify-center text-2xl">
+          🐈‍⬛
+        </div>
+
+        <div>
+          <h1 class="text-3xl font-extrabold text-gray-900">
+            Kim Song-gang
+          </h1>
+          <p class="text-sm font-bold text-indigo-600 uppercase tracking-[0.3em]">
+            Web Developer
+          </p>
+        </div>
+      </div>
+
+      <!-- Intro -->
+      <p class="mt-8 text-gray-600 font-medium leading-relaxed">
+        아이디어를 현실로 만드는 개발자. 구조적 설계부터 견고한 코드까지,
+        나만의 독특한 방식으로 창의적인 해결책을 만들어갑니다.
+      </p>
+
+      <!-- Info Grid -->
+      <div class="mt-8 grid grid-cols-2 gap-6 border-t border-gray-200 pt-8">
+
+        <!-- Skills -->
+        <div>
+          <h2 class="text-xs font-bold text-gray-400 uppercase tracking-[0.3em] mb-4">
+            Skills
+          </h2>
+
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 rounded-full bg-gray-900 text-white text-sm font-bold">HTML</span>
+            <span class="px-3 py-1 rounded-full bg-gray-900 text-white text-sm font-bold">Tailwind</span>
+            <span class="px-3 py-1 rounded-full bg-gray-100 text-gray-700 text-sm font-bold">JavaScript</span>
+            <span class="px-3 py-1 rounded-full bg-gray-100 text-gray-700 text-sm font-bold">React</span>
+          </div>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h2 class="text-xs font-bold text-gray-400 uppercase tracking-[0.3em] mb-4">
+            Contact
+          </h2>
+
+          <p class="font-bold text-gray-900">
+            010-8989-5088
+          </p>
+
+          <p class="mt-2 text-sm font-semibold text-indigo-600 break-all">
+            ssonggang0718@gmail.com
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Bottom Message -->
+      <div class="mt-8 rounded-2xl bg-gray-50 p-5 border border-gray-100">
+        <p class="text-sm font-bold text-gray-900">
+          Quiet Observer · Deep Thinker · Creative Builder
+        </p>
+        <p class="mt-2 text-sm text-gray-500">
+          Planning, design, code, and storytelling come together in HARACAT STUDIO.
+        </p>
+      </div>
+
+    </div>
+
+  </main>
+
+</body>
+</html>

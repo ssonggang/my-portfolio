@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HARA CAT STUDIO</title>
+    <!-- 웹 폰트 적용 (깔끔하고 동글동글한 Outfit 폰트 하나로 통일) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans antialiased text-gray-900 bg-white">
+
+    <!-- 1. Hero Section -->
+    <div class="relative bg-white bg-[url('images/hero.png')] bg-no-repeat bg-contain bg-right-bottom min-h-screen">
+        
+        <!-- 네비게이션 (GNB) -->
+        <header class="absolute inset-x-0 top-0 z-50">
+            <nav aria-label="Global" class="flex items-center justify-between p-6 lg:px-8 border-b border-gray-100 backdrop-blur-md bg-white/60">
+                <div class="flex lg:hidden">
+                    <button id="mobile-menu-btn" type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 hover:text-gray-900 transition">
+                        <span class="sr-only">Open main menu</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" class="size-6">
+                            <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+                <!-- 깔끔한 폰트 적용된 상단 메뉴 -->
+                <div class="hidden lg:flex lg:gap-x-12 mx-auto">
+                    <a href="profile.html" class="text-sm font-bold text-gray-500 hover:text-gray-900 uppercase tracking-widest transition-colors duration-300">Profile</a>
+                    <a href="personas.html" class="text-sm font-bold text-gray-500 hover:text-gray-900 uppercase tracking-widest transition-colors duration-300">Personas</a>
+                    <a href="gallery.html" class="text-sm font-bold text-gray-500 hover:text-gray-900 uppercase tracking-widest transition-colors duration-300">Gallery</a>
+                    <a href="contact.html" class="text-sm font-bold text-gray-500 hover:text-gray-900 uppercase tracking-widest transition-colors duration-300">Contact</a>
+                </div>
+                <div class="hidden lg:flex lg:justify-end">
+                    <a href="login.html" class="text-sm font-bold text-indigo-600 hover:text-indigo-500 uppercase tracking-widest transition-colors duration-300">Log in <span aria-hidden="true">&rarr;</span></a>
+                </div>
+            </nav>
+        </header>
+
+        <!-- 메인 헤드라인 영역 -->
+        <div class="relative isolate px-6 pt-14 lg:px-8 h-screen flex items-center">
+            <div class="max-w-2xl text-left ml-4 lg:ml-12">
+                <!-- 캡처 이미지 속 굵고 예쁜 고딕체 적용 + 그림자 효과 -->
+                <h1 class="text-5xl font-extrabold tracking-tight text-gray-900 sm:text-7xl drop-shadow-lg">
+                    One Cat,<br/>Many Perspectives
+                </h1>
+                <p class="mt-6 text-lg font-medium text-pretty text-gray-600 sm:text-xl/8 drop-shadow-sm">
+                    Welcome to <strong class="font-bold text-gray-900">HARA CAT STUDIO</strong>. I am a quiet observer and a deep thinker. From structural planning and elegant design to solid code and imaginative storytelling, I craft creative solutions in my own unique way.
+                </p>
+                
+                <div class="mt-10 flex items-center gap-x-6">
+                    <a href="#bento" class="rounded-full bg-gray-900 px-7 py-3.5 text-sm font-bold text-white shadow-xl shadow-gray-900/20 hover:bg-gray-700 hover:-translate-y-1 transition-all duration-300">
+                        Explore My Universe
+                    </a>
+                    <a href="#contact" class="text-sm/6 font-bold text-gray-600 hover:text-gray-900 transition-colors duration-300">
+                        Work with me <span aria-hidden="true">→</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. Bento Grids 섹션 -->
+    <div id="bento" class="bg-gray-50 py-24 sm:py-32">
+        <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
+            <h2 class="text-center text-base/7 font-bold text-indigo-600 uppercase tracking-widest">The Four Dimensions of HARACAT</h2>
+            <p class="mx-auto mt-2 max-w-lg text-center text-4xl font-extrabold tracking-tight text-balance text-gray-950 sm:text-5xl">Four creative modes<br/>One curious mind</p>
+            
+            <div class="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
+                <!-- Planning -->
+                <div class="group relative lg:row-span-2 overflow-hidden rounded-[calc(var(--radius-lg)+1px)] lg:rounded-l-[calc(2rem+1px)] shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-1">
+                    <div class="absolute inset-px rounded-lg bg-white lg:rounded-l-4xl"></div>
+                    <div class="relative flex h-full flex-col">
+                        <div class="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0 z-10">
+                            <p class="mt-2 text-2xl font-extrabold tracking-tight text-gray-950">Planning</p>
+                            <p class="mt-2 max-w-lg text-sm/6 font-medium text-gray-600">System & Strategy <br/> Organizing scattered ideas into clear, logical frameworks.</p>
+                        </div>
+                        <div class="@container relative min-h-120 w-full grow">
+                            <div class="absolute inset-x-10 top-10 bottom-10 overflow-hidden border-gray-200 bg-gray-100 shadow-xl rounded-2xl transition-transform duration-500 group-hover:scale-105">
+                                <img src="images/bento1.png" alt="Planning" class="size-full object-cover object-top" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Design -->
+                <div class="group relative max-lg:row-start-1 overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)] shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-1">
+                    <div class="absolute inset-px rounded-lg bg-white max-lg:rounded-t-4xl"></div>
+                    <div class="relative flex h-full flex-col">
+                        <div class="px-8 pt-8 sm:px-10 sm:pt-10 z-10">
+                            <p class="mt-2 text-2xl font-extrabold tracking-tight text-gray-950">Design</p>
+                            <p class="mt-2 max-w-lg text-sm/6 font-medium text-gray-600">Visual & UI/UX <br/> Creating calm, intuitive, and emotionally balanced experiences.</p>
+                        </div>
+                        <div class="flex flex-1 px-8 pb-8 pt-10 sm:px-10 sm:pb-10">
+                            <img src="images/bento4.png" alt="Design" class="w-full h-full object-cover rounded-2xl shadow-xl transition-transform duration-500 group-hover:scale-105" />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Development -->
+                <div class="group relative max-lg:row-start-3 lg:col-start-2 lg:row-start-2 overflow-hidden rounded-[calc(var(--radius-lg)+1px)] shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-1">
+                    <div class="absolute inset-px rounded-lg bg-white"></div>
+                    <div class="relative flex h-full flex-col">
+                        <div class="px-8 pt-8 sm:px-10 sm:pt-10 z-10">
+                            <p class="mt-2 text-2xl font-extrabold tracking-tight text-gray-950">Development</p>
+                            <p class="mt-2 max-w-lg text-sm/6 font-medium text-gray-600">Code & Logic <br/> Translating abstract ideas into stable systems.</p>
+                        </div>
+                        <div class="flex flex-1 items-center justify-center px-8 py-10 sm:px-10 transition-transform duration-500 group-hover:scale-105">
+                            <img src="images/bento3.jpg" alt="Development" class="w-full max-lg:max-w-xs rounded-xl shadow-lg" />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Creativity -->
+                <div class="group relative lg:row-span-2 overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-r-[calc(2rem+1px)] shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-1">
+                    <div class="absolute inset-px rounded-lg bg-white max-lg:rounded-b-4xl lg:rounded-r-4xl"></div>
+                    <div class="relative flex h-full flex-col">
+                        <div class="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0 z-10">
+                            <p class="mt-2 text-2xl font-extrabold tracking-tight text-gray-950">Creativity</p>
+                            <p class="mt-2 max-w-lg text-sm/6 font-medium text-gray-600">Story & Art <br/> Imagining quiet worlds, visual textures, and lingering stories.</p>
+                        </div>
+                        <div class="@container relative min-h-120 w-full grow">
+                            <div class="absolute inset-x-10 top-10 bottom-10 overflow-hidden border-gray-200 bg-gray-100 shadow-xl rounded-2xl transition-transform duration-500 group-hover:scale-105">
+                                <img src="images/bento2.png" alt="Creativity" class="size-full object-cover object-top" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. Blog Section -->
+    <div class="bg-gray-900 py-24 sm:py-32">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="mx-auto lg:mx-0 text-center">
+                <h2 class="text-4xl font-extrabold tracking-tight text-white sm:text-5xl">From the Desk of HARA CAT</h2>
+                <p class="mt-4 text-lg/8 font-medium text-gray-400">Thoughts, experiments, and daily observations from a quiet room.</p>
+            </div> 
+            <div class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-700 pt-16 sm:mt-20 sm:pt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+                
+                <!-- Blog 1 -->
+                <article class="flex max-w-xl flex-col items-start justify-between group cursor-pointer">
+                    <!-- 원본 세로형 비율을 살리는 h-[500px] 설정 -->
+                    <div class="w-full h-[500px] overflow-hidden rounded-2xl mb-4 shadow-xl">
+                        <img src="images/b_1.jpg" alt="" class="w-full h-full object-cover transition duration-500 group-hover:scale-105"/>
+                    </div>
+                    <div class="flex items-center gap-x-4 text-xs mt-2">
+                        <time datetime="2025-12-10" class="text-gray-400 font-medium">Dec 10, 2025</time>
+                        <span class="relative z-10 rounded-full bg-gray-800 px-3 py-1.5 font-bold text-indigo-400">Planning</span>
+                    </div>
+                    <div class="group relative grow">
+                        <h3 class="mt-4 text-xl font-extrabold text-white group-hover:text-indigo-400 transition">
+                            Worldbuilding: The 'Residual Fragrance'
+                        </h3>
+                        <p class="mt-4 line-clamp-3 text-sm/6 font-medium text-gray-400">Organizing chaos into a structured narrative. Exploring how to build a solid logical framework and deep worldview for a web novel.</p>
+                    </div>
+                </article>
+
+                <!-- Blog 2 -->
+                <article class="flex max-w-xl flex-col items-start justify-between group cursor-pointer">
+                    <div class="w-full h-[500px] overflow-hidden rounded-2xl mb-4 shadow-xl">
+                        <img src="images/b_2.jpg" alt="" class="w-full h-full object-cover transition duration-500 group-hover:scale-105"/>
+                    </div>
+                    <div class="flex items-center gap-x-4 text-xs mt-2">
+                        <time datetime="2026-04-20" class="text-gray-400 font-medium">Apr 20, 2026</time>
+                        <span class="relative z-10 rounded-full bg-gray-800 px-3 py-1.5 font-bold text-indigo-400">Development</span>
+                    </div>
+                    <div class="group relative grow">
+                        <h3 class="mt-4 text-xl font-extrabold text-white group-hover:text-indigo-400 transition">
+                            Structuring a Lark Inventory System
+                        </h3>
+                        <p class="mt-4 line-clamp-3 text-sm/6 font-medium text-gray-400">Translating abstract operational needs into stable, automated database formulas for efficient system building and management.</p>
+                    </div>
+                </article>
+
+                <!-- Blog 3 -->
+                <article class="flex max-w-xl flex-col items-start justify-between group cursor-pointer">
+                    <div class="w-full h-[500px] overflow-hidden rounded-2xl mb-4 shadow-xl">
+                        <img src="images/b_3.jpg" alt="" class="w-full h-full object-cover transition duration-500 group-hover:scale-105"/>
+                    </div>
+                    <div class="flex items-center gap-x-4 text-xs mt-2">
+                        <time datetime="2026-03-05" class="text-gray-400 font-medium">Mar 5, 2026</time>
+                        <span class="relative z-10 rounded-full bg-gray-800 px-3 py-1.5 font-bold text-indigo-400">Art & Design</span>
+                    </div>
+                    <div class="group relative grow">
+                        <h3 class="mt-4 text-xl font-extrabold text-white group-hover:text-indigo-400 transition">
+                            Exploring Impressionist Textures
+                        </h3>
+                        <p class="mt-4 line-clamp-3 text-sm/6 font-medium text-gray-400">Experimenting with Monet-like brushstrokes in a digital environment. Finding the perfect balance between mechanics and visual aesthetics.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. Header Section (Work with us) -->
+    <div id="contact" class="relative isolate overflow-hidden bg-gray-800 py-24 sm:py-32">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="mx-auto max-w-2xl lg:mx-0">
+                <h2 class="text-5xl font-extrabold tracking-tight text-white sm:text-7xl">Work with HARACAT</h2>
+                <p class="mt-8 text-lg font-medium text-gray-300 sm:text-xl/8">Do you have an interesting project? Let’s observe, analyze, and build something remarkable together.</p>
+            </div>
+            <div class="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
+                <div class="grid grid-cols-1 gap-x-8 gap-y-6 text-base/7 font-bold text-indigo-400 sm:grid-cols-2 md:flex lg:gap-x-10">
+                    <a href="profile.html" class="hover:text-white transition uppercase tracking-widest">View Profile <span aria-hidden="true">&rarr;</span></a>
+                    <a href="personas.html" class="hover:text-white transition uppercase tracking-widest">About Team <span aria-hidden="true">&rarr;</span></a>
+                    <a href="gallery.html" class="hover:text-white transition uppercase tracking-widest">Art Gallery <span aria-hidden="true">&rarr;</span></a>
+                    <a href="contact.html" class="hover:text-white transition uppercase tracking-widest">Contact Me <span aria-hidden="true">&rarr;</span></a>
+                </div>
+                <dl class="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
+                    <div class="flex flex-col-reverse gap-1 p-6 rounded-2xl bg-gray-700/30 border border-gray-600/50">
+                        <dt class="text-base/7 font-medium text-gray-400">Years of Experience</dt>
+                        <dd class="text-4xl font-extrabold tracking-tight text-white">10+</dd>
+                    </div>
+                    <div class="flex flex-col-reverse gap-1 p-6 rounded-2xl bg-gray-700/30 border border-gray-600/50">
+                        <dt class="text-base/7 font-medium text-gray-400">Systems Built</dt>
+                        <dd class="text-4xl font-extrabold tracking-tight text-white">Lark Base</dd>
+                    </div>
+                    <div class="flex flex-col-reverse gap-1 p-6 rounded-2xl bg-gray-700/30 border border-gray-600/50">
+                        <dt class="text-base/7 font-medium text-gray-400">Web Novels</dt>
+                        <dd class="text-4xl font-extrabold tracking-tight text-white">2</dd>
+                    </div>
+                    <div class="flex flex-col-reverse gap-1 p-6 rounded-2xl bg-gray-700/30 border border-gray-600/50">
+                        <dt class="text-base/7 font-medium text-gray-400">Curiosity</dt>
+                        <dd class="text-4xl font-extrabold tracking-tight text-white">Unlimited</dd>
+                    </div>
+                </dl>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
