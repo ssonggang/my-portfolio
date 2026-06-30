@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HARA CAT STUDIO</title>
-    <!-- 웹 폰트 적용 (깔끔하고 동글동글한 Outfit 폰트 하나로 통일) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
@@ -23,10 +22,8 @@
 </head>
 <body class="font-sans antialiased text-gray-900 bg-white">
 
-    <!-- 1. Hero Section -->
     <div class="relative bg-white bg-[url('images/hero.png')] bg-no-repeat bg-contain bg-right-bottom min-h-screen">
         
-        <!-- 네비게이션 (GNB) -->
         <header class="absolute inset-x-0 top-0 z-50">
             <nav aria-label="Global" class="flex items-center justify-between p-6 lg:px-8 border-b border-gray-100 backdrop-blur-md bg-white/60">
                 <div class="flex lg:hidden">
@@ -37,7 +34,6 @@
                         </svg>
                     </button>
                 </div>
-                <!-- 깔끔한 폰트 적용된 상단 메뉴 -->
                 <div class="hidden lg:flex lg:gap-x-12 mx-auto">
                     <a href="profile.html" class="text-sm font-bold text-gray-500 hover:text-gray-900 uppercase tracking-widest transition-colors duration-300">Profile</a>
                     <a href="personas.html" class="text-sm font-bold text-gray-500 hover:text-gray-900 uppercase tracking-widest transition-colors duration-300">Personas</a>
@@ -48,12 +44,20 @@
                     <a href="login.html" class="text-sm font-bold text-indigo-600 hover:text-indigo-500 uppercase tracking-widest transition-colors duration-300">Log in <span aria-hidden="true">&rarr;</span></a>
                 </div>
             </nav>
-        </header>
 
-        <!-- 메인 헤드라인 영역 -->
+            <div id="mobile-menu" class="hidden lg:hidden bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-lg absolute w-full left-0 top-full">
+                <div class="space-y-1 px-6 pb-6 pt-2">
+                    <a href="profile.html" class="block rounded-lg px-3 py-2 text-base font-bold text-gray-900 hover:bg-gray-50 uppercase tracking-widest">Profile</a>
+                    <a href="personas.html" class="block rounded-lg px-3 py-2 text-base font-bold text-gray-900 hover:bg-gray-50 uppercase tracking-widest">Personas</a>
+                    <a href="gallery.html" class="block rounded-lg px-3 py-2 text-base font-bold text-gray-900 hover:bg-gray-50 uppercase tracking-widest">Gallery</a>
+                    <a href="contact.html" class="block rounded-lg px-3 py-2 text-base font-bold text-gray-900 hover:bg-gray-50 uppercase tracking-widest">Contact</a>
+                    <a href="login.html" class="block rounded-lg px-3 py-2 text-base font-bold text-indigo-600 hover:bg-gray-50 uppercase tracking-widest">Log in &rarr;</a>
+                </div>
+            </div>
+            </header>
+
         <div class="relative isolate px-6 pt-14 lg:px-8 h-screen flex items-center">
             <div class="max-w-2xl text-left ml-4 lg:ml-12">
-                <!-- 캡처 이미지 속 굵고 예쁜 고딕체 적용 + 그림자 효과 -->
                 <h1 class="text-5xl font-extrabold tracking-tight text-gray-900 sm:text-7xl drop-shadow-lg">
                     One Cat,<br/>Many Perspectives
                 </h1>
@@ -73,14 +77,12 @@
         </div>
     </div>
 
-    <!-- 2. Bento Grids 섹션 -->
     <div id="bento" class="bg-gray-50 py-24 sm:py-32">
         <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
             <h2 class="text-center text-base/7 font-bold text-indigo-600 uppercase tracking-widest">The Four Dimensions of HARACAT</h2>
             <p class="mx-auto mt-2 max-w-lg text-center text-4xl font-extrabold tracking-tight text-balance text-gray-950 sm:text-5xl">Four creative modes<br/>One curious mind</p>
             
             <div class="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
-                <!-- Planning -->
                 <div class="group relative lg:row-span-2 overflow-hidden rounded-[calc(var(--radius-lg)+1px)] lg:rounded-l-[calc(2rem+1px)] shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-1">
                     <div class="absolute inset-px rounded-lg bg-white lg:rounded-l-4xl"></div>
                     <div class="relative flex h-full flex-col">
@@ -88,7 +90,7 @@
                             <p class="mt-2 text-2xl font-extrabold tracking-tight text-gray-950">Planning</p>
                             <p class="mt-2 max-w-lg text-sm/6 font-medium text-gray-600">System & Strategy <br/> Organizing scattered ideas into clear, logical frameworks.</p>
                         </div>
-                        <div class="@container relative min-h-120 w-full grow">
+                        <div class="@container relative min-h-[24rem] max-lg:min-h-[40rem] w-full grow">
                             <div class="absolute inset-x-10 top-10 bottom-10 overflow-hidden border-gray-200 bg-gray-100 shadow-xl rounded-2xl transition-transform duration-500 group-hover:scale-105">
                                 <img src="images/bento1.png" alt="Planning" class="size-full object-cover object-top" />
                             </div>
@@ -96,7 +98,6 @@
                     </div>
                 </div>
 
-                <!-- Design -->
                 <div class="group relative max-lg:row-start-1 overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)] shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-1">
                     <div class="absolute inset-px rounded-lg bg-white max-lg:rounded-t-4xl"></div>
                     <div class="relative flex h-full flex-col">
@@ -110,7 +111,6 @@
                     </div>
                 </div>
 
-                <!-- Development -->
                 <div class="group relative max-lg:row-start-3 lg:col-start-2 lg:row-start-2 overflow-hidden rounded-[calc(var(--radius-lg)+1px)] shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-1">
                     <div class="absolute inset-px rounded-lg bg-white"></div>
                     <div class="relative flex h-full flex-col">
@@ -124,7 +124,6 @@
                     </div>
                 </div>
 
-                <!-- Creativity -->
                 <div class="group relative lg:row-span-2 overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-r-[calc(2rem+1px)] shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-1">
                     <div class="absolute inset-px rounded-lg bg-white max-lg:rounded-b-4xl lg:rounded-r-4xl"></div>
                     <div class="relative flex h-full flex-col">
@@ -132,7 +131,7 @@
                             <p class="mt-2 text-2xl font-extrabold tracking-tight text-gray-950">Creativity</p>
                             <p class="mt-2 max-w-lg text-sm/6 font-medium text-gray-600">Story & Art <br/> Imagining quiet worlds, visual textures, and lingering stories.</p>
                         </div>
-                        <div class="@container relative min-h-120 w-full grow">
+                        <div class="@container relative min-h-[24rem] max-lg:min-h-[40rem] w-full grow">
                             <div class="absolute inset-x-10 top-10 bottom-10 overflow-hidden border-gray-200 bg-gray-100 shadow-xl rounded-2xl transition-transform duration-500 group-hover:scale-105">
                                 <img src="images/bento2.png" alt="Creativity" class="size-full object-cover object-top" />
                             </div>
@@ -143,7 +142,6 @@
         </div>
     </div>
 
-    <!-- 3. Blog Section -->
     <div class="bg-gray-900 py-24 sm:py-32">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
             <div class="mx-auto lg:mx-0 text-center">
@@ -152,9 +150,7 @@
             </div> 
             <div class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-700 pt-16 sm:mt-20 sm:pt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
                 
-                <!-- Blog 1 -->
                 <article class="flex max-w-xl flex-col items-start justify-between group cursor-pointer">
-                    <!-- 원본 세로형 비율을 살리는 h-[500px] 설정 -->
                     <div class="w-full h-[500px] overflow-hidden rounded-2xl mb-4 shadow-xl">
                         <img src="images/b_1.jpg" alt="" class="w-full h-full object-cover transition duration-500 group-hover:scale-105"/>
                     </div>
@@ -170,7 +166,6 @@
                     </div>
                 </article>
 
-                <!-- Blog 2 -->
                 <article class="flex max-w-xl flex-col items-start justify-between group cursor-pointer">
                     <div class="w-full h-[500px] overflow-hidden rounded-2xl mb-4 shadow-xl">
                         <img src="images/b_2.jpg" alt="" class="w-full h-full object-cover transition duration-500 group-hover:scale-105"/>
@@ -187,7 +182,6 @@
                     </div>
                 </article>
 
-                <!-- Blog 3 -->
                 <article class="flex max-w-xl flex-col items-start justify-between group cursor-pointer">
                     <div class="w-full h-[500px] overflow-hidden rounded-2xl mb-4 shadow-xl">
                         <img src="images/b_3.jpg" alt="" class="w-full h-full object-cover transition duration-500 group-hover:scale-105"/>
@@ -207,7 +201,6 @@
         </div>
     </div>
 
-    <!-- 4. Header Section (Work with us) -->
     <div id="contact" class="relative isolate overflow-hidden bg-gray-800 py-24 sm:py-32">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
             <div class="mx-auto max-w-2xl lg:mx-0">
@@ -242,6 +235,16 @@
             </div>
         </div>
     </div>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        // 버튼 클릭 시 메뉴 영역의 'hidden' 클래스를 토글(껐다 켰다)합니다.
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
 
 </body>
 </html>
